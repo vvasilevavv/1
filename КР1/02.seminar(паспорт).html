@@ -1,0 +1,109 @@
+<!-- 13 - 14. Создание сайта, содержащего навигацию и задания (страницы), выполненные с использованием DOM и JS. Необходимо:
+
+__01. Сформировать страницу, содержащую вторую и третью страницы своего паспорта. Личные данные
+ (кроме фамилии,имени и года рождения) можно изменить. С использованием Инструментов разработчика
+  произвести получение из DOM следующих данных: фамилия, имя, год рождения 
+  (document.getElementsByTagName('p')[2].childNodes[1].innerText). Скрин экрана браузера сохранить
+  и вставить на соответствующей странице. Название страница "DOM_JS. Считываем информацию из DOM". 
+  ример на получения данных https://github.com/vmarshirov/g06u28/blob/main/010_html/010_typography/ex_01.png
+
+__02.Создать страницу, изменяющую вторую и третью страницы своего паспорта по событию. Личные данные
+ ( фамилия и имя и год рождения) изменить на латинские симмолы. Название страницы "Изменяем кириллицу 
+  на латиницу по клику". Пример с обработкой по событию на странице https://vmarshirov.github.io/g06u28/010_html/010_typography/ -->
+  
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <title> Title_pasport </title>
+  <style>
+    a:hover {
+        background-color:lightskyblue;
+    }
+
+    a.active {
+        background-color: rgb(255, 195, 255);
+    }
+</style>
+  <style type ="text/css">
+  body{ 
+    background-image: url(passport/passpotr_shablon.png);
+  
+    background-repeat: no-repeat;
+  }
+  .pasport { 
+    margin-top: 80px;
+   }
+
+  .kem_vydan{
+    padding-left: 100px;
+    padding-top: 60px;
+  }
+  .code{
+    padding-left: 90px;
+    padding-top: 30px;
+  }
+  .fio{
+    padding-left: 200px;
+    padding-top: 185px;
+  }
+  .name{
+  padding-left: 200px;
+  padding-top: 27px;
+  }
+  .second_name{
+  padding-left: 200px;
+  padding-top: 6px;
+  }
+  .data_birth{
+  padding-left: 170px;
+  padding-top: 5px;
+  }
+  .img{
+  padding-left: 32px;
+  margin-top: -90px;
+  }
+  .city{
+  padding-left: 180px;
+  margin-top: 3px;
+  }
+  .btn{
+  padding-left: 5px;
+  margin-top: 70px;
+  }
+  </style>
+</head>
+
+<body>
+      <a id="top"></a>
+
+
+
+
+  <div class="kem_vydan"> ГУ МВД по г. Санкт-Петербург 
+    <br> и Ленинградской области</div>
+  <div class="code"> 01.11.2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;780-001</div>
+
+  <div class="fio">Васильева</div>
+  <div class="name">Валерия</div>
+  <div class="second_name">Дмитриевна</div>
+<div class="data_birth">Жен &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25.10.2007</div>
+<div class="city">Санкт-Петербург</div>
+<div class="img"> <img src="passport/фото.jpg" height="120" width="100" > </div>
+
+<button class="btn" id="change"> Заменить </button>
+
+        <h1>Меню</h1>
+<ul>
+    <li><a href="02.seminar(паспорт).html" class="active">Паспорт Заводчика</a></li>
+    <li><a href="available_cats.html">Наши котята</a></li>
+    <li><a href="care.html" >Как ухаживать за котятами</a></li>
+    <li><a href="Form.html">Ссылка на Форму</a></li>
+    <li><a href="КОПИЯ.html" >Отправка поездом</a></li>
+</ul>
+</body>
+
+<script src="passport/change.js"></script>
+
+</html>
+

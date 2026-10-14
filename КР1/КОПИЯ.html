@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отправка поездом</title>
+  <style>
+    a:hover {
+        background-color:lightskyblue;
+    }
+
+    a.active {
+        background-color: rgb(255, 195, 255);
+    }
+</style>
+</head>
+<body>
+    <a id="top"></a>
+<h1>Меню</h1>
+<ul>
+    <li><a href="02.seminar(паспорт).html">Паспорт Заводчика</a></li>
+    <li><a href="available_cats.html" \>Наши котята</a></li>
+    <li><a href="care.html" >Как ухаживать за котятами</a></li>
+    <li><a href="Form.html">Ссылка на Форму</a></li>
+    <li><a href="КОПИЯ.html" class="active">Отправка поездом</a></li>
+</ul>
+
+  <style>
+    body {
+      
+      padding: 20px;
+    }
+    input, button {
+      padding: 8px;
+      font-size: 16px;
+    }
+    #result {
+      color: #2a5;
+    }
+    #error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Определение места котенка в плацкартном вагоне</h1>
+  <br><textarea cols="60" rows="4" id="task" name="formulation">
+1005. Дано. Номер места в плацкартном вагоне. Определить, какое это место: верхнее или нижнее, в купе или боковое.
+    </textarea>
+  <p>Введите номер места (1–54):</p>
+  <input type="number" name="mesto" id="seatInput" min="1" max="54">
+  <button onclick="checkSeat()">Проверить место</button>
+
+<div id="result"></div>
+  <div id="error"></div>
+
+  <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">      
+    <p>Для поисковика:<input type="hidden" name="q" value="плацкарт"></p>
+    
+    
+<p><input type="submit" value="Отправить">
+</p> 
+
+</form>
+  
+<script src="КОПИЯ.js"></script>
+  
+</body>
+</html>

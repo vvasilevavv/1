@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Формы. Отправляем данные на сервер</title>
+<style>
+    a:hover {
+        background-color:lightskyblue;
+    }
+
+    a.active {
+        background-color: rgb(255, 195, 255);
+    }
+</style>
+</head>
+<body>
+
+<a id="top"></a>
+<h1>Меню</h1>
+<ul>
+    <li><a href="02.seminar(паспорт).html">Паспорт Заводчика</a></li>
+    <li><a href="available_cats.html">Наши котята</a></li>
+    <li><a href="care.html">Как ухаживать за котятами</a></li>
+    <li><a href="Form.html" class="active">Ссылка на Форму</a></li>
+    <li><a href="КОПИЯ.html">Отправка поездом</a></li>
+</ul>
+
+    <h3 align="center">Хотите взять котёнка?<br>Заполните анкету!</h3>
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+    <!--<form action="https://httpbin.org/post" method='post' >-->        
+        <p>Для поисковика:<input type="hidden" name="q" value="котики картинки"></p>
+<form>
+    <p><b>ФИО</b> <input type="text" name="fio"></p>
+    <p><b>Укажите ваш возраст</b> <input type="number" min="0" max="100" value="10" name="age"></p>
+    <p><b>Пол котёнка:</b><Br>
+   <input type="radio" name="gender" value="devocka"> Девочка<Br>
+   <input type="radio" name="gender" value="malchik"> Мальчик<Br>
+   <input type="radio" name="gender" value="luboi"> Любой<Br>
+</p>
+
+<p><b>Выберите свои сильные стороны: </b><br>
+            <input type="Checkbox" name="characteristic" value="10" checked>Ответственность - 10
+            <input type="Checkbox" name="characteristic" value="20" checked>Внимательность -20
+            <input type="Checkbox" name="characteristic" value="30" checked>Честность - 30
+</p>
+
+ <p><b>Дата приезда в питомник: </b><input type="date" name="user_date" value='2024-10-02'></p>
+        <p>Пароль для ЛК: <input type="Password" name="password" size=9 value="123"></p>
+        
+<p><b>Комментарий</b><Br>
+   <textarea name="comment" cols="40" rows="3"></textarea></p>
+   <p><input type="submit" value="Отправить">
+   <input type="reset" value="Очистить">
+</p>  
+    </form>
+</body>
+</html>
